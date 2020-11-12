@@ -1,12 +1,17 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 
-const Header = () => {
+const Header = (props) => {
+  const {title} = props;
   return (
     <View style={styles.header}>
-      <Text style={styles.text}>Shopping List</Text>
+      <Text style={styles.text}>{title}</Text>
     </View>
   );
+};
+
+Header.defaultProps = {
+  title: 'Shopping List',
 };
 
 export default Header;
